@@ -95,11 +95,17 @@ x[y]
 
 3. Select the numbers divisible by 3 from `x`.
 
+```{r} 
+z <- as.numeric(x) %% 3 == 0
+x[z & !is.na(z)]
+```
 
 
 4. Remove all values with an even index from `x`.
 
-
+```{r}
+x[c(TRUE, FALSE)] #will repeat itself
+```
 
 ## Git from the command line
 
